@@ -1,0 +1,107 @@
+body {
+    background-color: #000;
+}
+
+    /* Banner/header styling */
+
+.jumbotron-fluid {
+    overflow: hidden;
+}
+
+#top {
+    width: 100%;
+    padding-top: 5px;
+}
+
+    /* First Row styling */
+
+h1 {
+    color: #4abdac;
+    font-family: 'Playfair Display', serif;
+    padding-top: 10px;
+}
+
+#img-giphy {
+    padding-top: 25px;
+}
+
+    /* Second Row styling */
+
+#buttonGroup {
+    padding: 25px;
+}
+            
+.feeling {
+    text-transform: capitalize; /* force new buttons to be same style as original buttons */
+}
+
+button {
+    color: #000;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 5px;
+    background-color: #f7b733;
+    border-radius: 8px;
+    width: 150px;
+}
+
+button:hover {
+    background-color: #6b7a8f;
+    color: #fff;
+}
+
+    /* Third Row styling */
+
+#displayGiphy {
+    background-color: #000;
+}
+
+.arrange {
+    float: left;
+    padding: 15px;
+}
+
+.giphyBorder {
+    border: 4px solid #4abdac;
+    border-radius: 8px;
+}
+
+p {
+    margin: 0em;
+}
+
+.rate {
+    color: #f7b733;
+    font-family: 'Lato', sans-serif;
+    padding-bottom: 15px;
+}
+
+.title {
+    text-transform: capitalize;
+    color: #f7b733;
+    padding-top: 15px;
+}
+
+label {
+    color: #f7c331;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.submit {
+    color: #fff;
+    background-color: #f7882f;
+}
+
+    /* Footer styling */
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    background-color: #6b7a8f;
+    color: white;
+    text-align: center;
+  }
