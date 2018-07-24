@@ -2,105 +2,146 @@
 <html lang="en-US">
 
 <head>
-    <!-- META TAGS -->
+
+    <!-- metadata -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="The GifTastic GIPHY project" />
+    <meta name="description" content="Fiftastic GIPHY Project: GA Tech Bootcamp" />
     <meta name="author" content="Danny S. Sprouse" />
 
-    <!-- TITLE -->
+    <!-- website title -->
     <title>The Emotional GIPHY</title>
 
-    <!-- LINKS -->
+    <!-- link to css reset -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
 
+    <!-- link to bootstrap cdn -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous" />
 
+    <!-- link to css stylesheet -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+
+    <!-- link to Google fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display|Lato" />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <!-- link to favicon image -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+
+    <!-- link to social media buttons with fontawesome icon library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous" />
+
 </head>
 
 <!-- PAGE CONTENT -->
 
 <body>
+    <div class="container-fluid text-center wrapper">
 
-    <!-- Header Row - contains the banner image -->
-    <div class="jumbotron-fluid">
-        <div class="row text-center">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <img src="assets/images/banner.jpg" class="img-fluid mx-auto d-block" id="top" alt="Row of thumbnail emotional expressions" />
-            </div>
+        <!-- Header Row - contains the banner image -->
+        <div class="bannerImage">
+            <img src="assets/images/banner.jpg" class="img-fluid mx-auto d-block" alt="Row of thumbnail emotional expressions" />
         </div>
-    </div> 
-    
-    <div class="container-fluid">
 
-        <div class="section">
+        <section>
 
-    <!-- First Row - left: Text and GIPHY // Text left x9cols -->
-        <div class="container-text">
-            <div class="row text-center">
-                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 col-back">
-                    <h1>What are you feeling today?</h1>
-                </div>
+            <!-- First Row - left: Text and GIPHY // Text left x9cols -->
+            <div class="container-text">
+                <div class="row text-center">
+                    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 col-back">
+                        <h1>What are you feeling today?</h1>
+                    </div>
 
-    <!-- First Row - right: Text and GIPHY // Powered By Image right x3cols -->
-                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="img-giphy">
-                    <a href="https://giphy.com" target="_blank">
-                        <img src="assets/images/giphy2.gif" />
-                    </a>
+                    <!-- First Row - right: Text and GIPHY // Powered By Image right x3cols -->
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="img-giphy">
+                        <a href="https://giphy.com" target="_blank">
+                            <img src="assets/images/giphy2.gif" />
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div> <!-- end container text-->
+            <!-- end container text-->
 
-    <!-- Second Row - left: Button Area x9cols -->
-        <div class="container-buttons">
-            <div class="row text-center">
-                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                    <div id="buttonGroup"></div>
-                </div>
+            <!-- Second Row - left: Button Area x9cols -->
+            <div class="container-buttons">
+                <div class="row text-center">
+                    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                        <div id="buttonGroup"></div>
+                    </div>
 
-    <!-- Second Row - right: Search Area x3cols -->
-                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
-            </div>
-        </div>  <!-- end container buttons-->
-
-    <!-- Third Row - left: GIPHY Display Area x9cols -->
-        <div class="container-giphy">
-            <div class="row text-center">
-                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                    <div id="displayGiphy"></div>
-                </div>
-    
-    <!-- Third Row - right: Search Area x3cols -->
-                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                    <form>
-                        <fieldset>
-                            <label for="feeling-input">Add Your Feeling</label>
+                    <!-- Second Row - right: Search Area x3cols -->
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <br />
+                        <form>
+                            <fieldset>
+                                <label for="feeling-input">Add Your Feeling</label>
                                 <br />
-                            <input type="text" placeholder="Type feeling here" id="feeling-input">
-                            <br /><br />
-                            <button type="submit" class="btn submit" data="submitBtn">Submit</button>
-                        </fieldset>
-                    </form>
+                                <input type="text" name="feeling-input" required placeholder="Type feeling here" id="feeling-input">
+                                <br />
+                                <br />
+                                <button type="submit" class="btn submit" data="submitBtn">Submit</button>
+                            </fieldset>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>  <!-- close container giphy-->
-        </div> <!--close section div-->
-    </div><!--close container-fluid div-->
-<br /><br />
+            <!-- end container buttons-->
 
-    <!-- Foot Information -->
-    <div class="footer">
-        <p>Copyright &#169; 2018</p>
+            <!-- Third Row - GIPHY Display Area x9cols -->
+            <div class="container-fluid container-giphy text-center">
+                <div class="row text-center">
+                    <div class="col">
+                        <div class="img-fluid" id="displayGiphy"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <!-- SCRIPTS -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script type="text/javascript" src="assets/javascript/giftastic.js"></script>
+<br /> <br /> <br />
+
+    <!-- footer info -->
+    <footer class="container-fluid">
+
+        <!-- copyright -->
+        <p>Copyright &#169; 2018</p>
+
+        <!-- font awesome social button icons -->
+        <span class="social-icons">
+            <a href="https://www.linkedin.com/in/danny-sprouse" target="_blank" class="fab fa-linkedin">
+            </a>
+        </span>
+        <span class="social-icons">
+            <a href="https://github.com/DannySprouse" target="_blank" class="fab fa-github">
+            </a>
+        </span>
+        <span class="social-icons">
+            <a href="https://twitter.com/SprouseDanny" target="_blank" class="fab fa-twitter">
+            </a>
+        </span>
+        <span class="social-icons">
+            <a href="https://www.facebook.com/dannysprouseATL" target="_blank" class="fab fa-facebook">
+            </a>
+        </span>
+        <span class="social-icons">
+            <a href="https://www.pinterest.com/dannysprouse/" target="_blank" class="fab fa-pinterest">
+            </a>
+        </span>
+        <span class="social-icons">
+            <a href="https://500px.com/tcephotography" target="_blank" class="fab fa-500px"></a>
+        </span>
+    </footer>
+
+</div> <!-- closing div for wrapper -->
+
+    <!-- script for jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- script for javascript -->
+    <script src="assets/javascript/giftastic.js"></script>
 
 </body>
 
