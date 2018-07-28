@@ -1,19 +1,36 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  * {
+    box-sizing: inherit;
+  }
+
 body {
-    background-color: #fff;
+    position: relative;
+    margin: 0;
+    padding-bottom: 8rem;
+    min-height: 100%;
+    background-color: #dfdce3;
+    color: #000;
 }
 
 .wrapper {
     max-width: 1000px;
-    margin: 0 auto;
     height: auto;
+    padding: 0px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: #000;
+    overflow: hidden;
 }
 
 .bannerImage {
-    padding-top: 10px;
-    background-color: #000;
+    padding-top: 0px;
+    background-color: #dfdce3;
 }
 
     /* First Row styling */
@@ -107,30 +124,31 @@ input:required:invalid, input:focus:invalid {
     background-position: right top;
     background-repeat: no-repeat;
     -moz-box-shadow: none;
-  }
+}
 
-  input:required:valid {
+input:required:valid {
     background-image: url("../images/green.png");
     background-position: right top;
     background-repeat: no-repeat;
-  }
+}
 
     /* Footer styling */
 
 footer {
-    position: fixed;
+    position: absolute;
     padding-top: 5px;
     border-top: 4px solid #f7882f;
     left: 0;
     bottom: 0;
+    right: 0;
     width: 100%;
     background-color: #4abdac;
     opacity: 0.8;
     color: #000;
     font-size: 18px;
     text-align: center;
-    height: auto;
-    }
+    padding-bottom: 1rem;
+}
 
      /* social icons */
 
@@ -140,14 +158,26 @@ footer {
     text-align: center;
     text-decoration: none;
     margin: 10px 5px;
-  }
+}
   
-  .fab:hover {
+.fab:hover {
     opacity: 0.7;
     color: #000;
-  }
+}
   
-  .fa-linkedin, .fa-github, .fa-twitter, .fa-facebook, .fa-pinterest, .fa-500px {
+.fa-linkedin, .fa-github, .fa-twitter, .fa-facebook, .fa-pinterest, .fa-500px {
     color: #000;
-  }
+}
   
+  /* MEDIA QUERIES */
+
+  /* On screens that are 600px or less, resize social icon buttons */
+@media screen and (max-width: 600px) {
+    .social-icons {
+      font-size: 16px;
+      padding-right: 5px;
+    }
+    #copyright {
+        font-size: 12px;
+    }
+}

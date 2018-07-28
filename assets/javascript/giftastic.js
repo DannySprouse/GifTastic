@@ -87,10 +87,23 @@ $(document).on("click", ".gif", function(){
 // Create a function to allow user input and add that to the array so a button can be made
 
 $(".submit").on("click", function(){
+        // Prevent empty field submission
+    if ($.trim($("#feeling-input").val()) === "") {
+        alert("You must enter a feeling");
+        return false;
+    }
+    
+    event.preventDefault();
+    
     var newFeeling = $("#feeling-input").val().trim();
+    
+    $("#feeling-input").val(""); // Clears input field on 'enter'
+    
     feelings.push(newFeeling);
+
     makeButtons();
     return false; // allows user to hit enter instead of mouse click on submit to generate new button
+
 }) // closes click button function
 
 // Display the giphy images onto the page in the <div displayGiphy>
